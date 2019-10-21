@@ -1,3 +1,4 @@
+package g1.paymeback;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,13 +28,13 @@ public class Balance {
     }
     
     public float displayBalance (User pov_user, User other_user){
-        float balance;
+        float balance = 0;
         for (Transaction t :transaction_list){
-            if (t.payer = pov_user) {
-                balance += t.splitBill();
+            if (t.getPayer() == pov_user) {
+                balance += t.getAmountPerson();
             }
-            else if (t.payer = other_user && t.paybackers.contains(t.payer)){
-                balance -= t.splitBill();
+            else if (t.getPayer() == other_user && t.getPaybackers().contains(t.getPayer())){
+                balance -= t.getAmountPerson();
             }
         }
         return balance;
