@@ -18,13 +18,13 @@ public class User {
     String password;
     int id;
 
-   public User(String firstName, String lastName, String email, String userName, String password)
+   public User(String firstName, String lastName, String email, String userName, String password, int id)
   {
       this.firstName= firstName;
       this.lastName = lastName;
       this.userName = userName;
       this.password = password;
-   
+      this.id = id;
       
   }
   
@@ -50,7 +50,11 @@ public class User {
   {
     return this.password;
   }
-
+  
+  public int getID()
+  {
+      return this.id;
+  }
   public void setFirstName(String firstName)
   {
     this.firstName = firstName;
@@ -67,7 +71,10 @@ public class User {
   {
     this.password = password;
   }
-  
+  public void setID (int ID)
+  {
+      this.id = ID;
+  }
 
 }
 

@@ -40,7 +40,7 @@ public class Balance {
         return balance;
     }
     public HashMap<User, Float>displayBalanceEveryone (ArrayList<User> userlist){
-        HashMap<User, Float> balanceDictionary = new HashMap<User, Float>();
+        HashMap<User, Float> balanceDictionary = new HashMap<>();
         userlist.remove(this.pov_user);
         for (User u : userlist){
            float balance = displayBalance(this.pov_user, u); 
@@ -49,15 +49,29 @@ public class Balance {
         return balanceDictionary;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public User getPOVuser () {
+        return this.pov_user;
+    }
+    public User getOtheruser() {
+        return this.other_user;
+    }
+    public ArrayList<Transaction> getTransactionlist() {
+        return this.transaction_list;
+    }
+    public Currency getCurrency() {
+        return this.currency;
+    }
+    public void setPOVuser (User pov) {
+        this.pov_user = pov;
+    }
+    public void setOtheruser(User other) {
+        this.other_user = other;
+    }
+    public void setTransactionlist(ArrayList<Transaction> transactionlist) {
+        this.transaction_list = transactionlist;
+    }
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
+    }   
+       
 }

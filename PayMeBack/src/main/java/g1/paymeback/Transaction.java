@@ -88,4 +88,7 @@ public class Transaction {
     public ArrayList<User> getPaybackers() {
         return this.paybackers;
     }
+    public void setPayer(User payer){
+        this.payer = payer;
+    }
 }

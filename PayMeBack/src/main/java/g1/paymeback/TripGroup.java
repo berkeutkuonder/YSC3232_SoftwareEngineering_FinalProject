@@ -43,11 +43,11 @@ public class TripGroup {
         }
     }
     
-    public void addTranscation (Transaction transaction){
+    public void addTransaction (Transaction transaction){
         transactions.add(transaction);
     }
     
-    public void deleteTranscation(Transaction transaction){
+    public void deleteTransaction(Transaction transaction){
         if (this.transactions.contains(transaction)) {
             this.transactions.remove(transaction);
         }
