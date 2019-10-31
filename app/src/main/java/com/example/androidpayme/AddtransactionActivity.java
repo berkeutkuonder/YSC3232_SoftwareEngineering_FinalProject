@@ -2,33 +2,30 @@ package com.example.androidpayme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity  {
+public class AddtransactionActivity extends AppCompatActivity {
     private Button addMember;
-    private LinearLayout main;
-    private Button confirmGroup;
-
+    private LinearLayout addMemberLayout;
+    private Button addTransaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_creategroup);
-        addMember = findViewById(R.id.button2);
-        main = findViewById(R.id.buttonlayout);
-        confirmGroup = findViewById(R.id.confirmgroup);
-        addMember.setOnClickListener(new OnClickListener() {
+        setContentView(R.layout.activity_addtransaction);
+        addMember = findViewById(R.id.addmember2);
+        addMemberLayout= findViewById(R.id.addmemberview);
+        addTransaction = findViewById(R.id.addtransaction);
+        addMember.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                EditText nametitle = new EditText(MainActivity.this);
+            public void onClick(View v) {
+                EditText nametitle = new EditText(AddtransactionActivity.this);
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 params.setMargins(20, 10, 20, 10);
                 //  params.weight = 1.0f;
@@ -41,23 +38,8 @@ public class MainActivity extends AppCompatActivity  {
                 nametitle.setTextSize(18);
                 nametitle.setHint("Enter Member Name");
                 nametitle.setMinimumWidth(140);
-                main.addView(nametitle);
-
-
-            }
-
-
-        });
-        confirmGroup.setOnClickListener(new OnClickListener() {
-           @Override
-            public void onClick(View v) {
-              Intent intent = new Intent (MainActivity.this, AddtransactionActivity.class);
-               startActivity(intent);
+                addMemberLayout.addView(nametitle);
             }
         });
-
-
-
-
     }
 }

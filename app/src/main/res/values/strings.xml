@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidPayMe</string>
+    <string name="name_of_group">Name of Group:</string>
+    <string name="create_group">Create Group</string>
+    <string name="members">Members :</string>
+    <string name="name">Name:</string>
+    <string name="add_member">Add Member</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
